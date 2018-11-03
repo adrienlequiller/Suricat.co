@@ -1,10 +1,9 @@
 <div class="container-fluid p-0">
   <div class="row">
-    <div class="col-sm-12">
+    <div class="col-12">
       <div class="banner-container">
         <div class="banner" style="background-image: url(<%= asset_pack_path 'images/banner-suricat2.jpg' %>);">
-          <div class="col-sm-6">
-            <div class="banner-main">
+            <div class="banner-content">
               <h1>Manage all your job opportunities</h1>
               <p>Save, gather and keep track of all your job opportunities in one place to spot the most fitted job.</p>
 
@@ -13,7 +12,6 @@
                 <%= link_to t(".sign_up", default: "Sign up"), new_user_registration_path, class: "btn btn-secondary" %>
               </div>
             </div>
-          </div>
         </div>
       </div>
     </div>
