@@ -28,6 +28,7 @@ class ImportancesController < ApplicationController
     @importance.criteria_attributes = importances_params[:criteria_attributes]
 
     if @importance.save
+      @user_opportunities.where(user: current_user).each(&:save)
       redirect_next
     else
       render :edit

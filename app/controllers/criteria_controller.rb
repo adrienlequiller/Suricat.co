@@ -24,6 +24,7 @@ class CriteriaController < ApplicationController
   def update
     authorize @criterium
     if @criterium.update(criterium_params)
+      @user_opportunities.where(user: current_user).each(&:save)
       redirect_to importance_path(@importance)
     else
       render :edit
