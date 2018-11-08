@@ -1,12 +1,35 @@
 <% unless @status.nil? %>
   <% if @status == :review %>
     <h2><span class="badge badge-primary">new</span> Offers to <%= @status %></h2>
+    <div class="d-flex justify-content-end text-dark" style="font-size: 12px">
+      <p>Rating |</p>
+      <p>Matching |</p>
+      <p>Mark as |</p>
+      <p class="mr-3">Trash</p>
+    </div>
   <% elsif @status == :pending %>
     <h2><i class="fas fa-flag text-danger"></i> <%= @status.capitalize %> offers</h2>
+    <div class="d-flex justify-content-end text-dark" style="font-size: 12px">
+      <p>Rating |</p>
+      <p>Matching |</p>
+      <p>Mark as |</p>
+      <p class="mr-3">Trash</p>
+    </div>
     <% elsif @status == :applied %>
     <h2><i class="fa fa-check-circle text-success"></i> <%= @status.capitalize %> offers</h2>
+    <div class="d-flex justify-content-end text-dark" style="font-size: 12px">
+      <p>Rating |</p>
+      <p>Matching |</p>
+      <p class="mr-3">Trash</p>
+    </div>
   <% else %>
     <h2><i class="fas fa-trash text-gray"></i> <%= @status.capitalize %></h2>
+    <div class="d-flex justify-content-end text-dark" style="font-size: 12px">
+      <p>Rating |</p>
+      <p>Matching |</p>
+      <p>Reload |</p>
+      <p class="mr-3">Trash</p>
+    </div>
   <% end %>
 <% end %>
 
